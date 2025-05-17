@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "web-ext run --source-dir ./",
+    "build": "web-ext build --overwrite-dest"
+  },
+  "devDependencies": {
+    "web-ext": "^8.6.0"
+  }
+}

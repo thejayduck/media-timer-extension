@@ -1,0 +1,238 @@
+body {
+  background-color: var(--background);
+  font-family: sans-serif;
+  width: 200px;
+  padding: 10px 10px 0 10px;
+
+  --radius: 4px;
+  --background: hsl(251, 17%, 12%);
+  --accent: #ff4d6d;
+  --accent-light: #ff758f;
+  --spacing-medium: 12px;
+  --spacing: 8px;
+  --spacing-small: 4px;
+}
+
+.bx,
+[class^="ri-"] {
+  font-size: 1.2rem;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  text-transform: none;
+  font-weight: 400;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+
+/* Time Input */
+
+.numberInput {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+input[type="number"] {
+  color: white;
+  width: 90px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 var(--spacing-small);
+  text-align: center;
+  outline: none;
+  border-radius: var(--radius);
+  /* border-radius: 0; */
+
+  border: none;
+  background-color: var(--background);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]:focus {
+  outline: 1px solid var(--accent);
+  box-shadow: 0 0 3px var(--accent-light);
+}
+
+.minuteDisplay::-webkit-outer-spin-button,
+.minuteDisplay::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .numberInput:focus-within .numberInputButton:nth-of-type(1) {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.numberInput:focus-within .numberInputButton:nth-of-type(2) {
+  border-radius: 0 var(--radius) var(--radius) 0;
+} */
+
+.numberInputButton {
+  width: 36px;
+  padding: 0;
+
+  /* height: 36px; */
+  background-color: var(--background);
+  border: 1px solid var(--accent);
+  margin-top: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Repeat Toggle */
+.repeatCheckWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing);
+  position: relative;
+  cursor: pointer;
+}
+
+.repeatCheckWrapper .slider {
+  color: white;
+  font-size: 0.9em;
+}
+
+.repeatCheckWrapper input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: var(--background);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  outline: none;
+  transition: all 255ms;
+  cursor: pointer;
+}
+
+.repeatCheckWrapper input[type="checkbox"]:checked {
+  /* background-color: var(--accent-light); */
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 10%,
+    var(--accent-light) 100%
+  );
+}
+
+.repeatCheckWrapper input[type="checkbox"]:disabled {
+  opacity: 0.5;
+}
+
+.repeatCheckWrapper input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius);
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  transition: all 255ms;
+}
+
+.repeatCheckWrapper input[type="checkbox"]:checked::before {
+  left: 22px;
+}
+
+.repeatCheckWrapper input[type="checkbox"]:focus {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 3px var(--accent-light);
+}
+
+/* Links */
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  gap: 5px;
+  padding-top: 10px;
+}
+
+.links .timeRemaining {
+  flex: 1;
+  color: white;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  padding: var(--spacing-small);
+  border-radius: var(--radius);
+  opacity: 0.2;
+  transition: all 255ms;
+}
+
+.links a:hover {
+  opacity: 1;
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 10%,
+    var(--accent-light) 100%
+  );
+}
+
+/* Button */
+button {
+  border: 1px solid var(--accent);
+  background-color: var(--background);
+  color: white;
+  outline: none;
+
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  margin-top: var(--spacing-medium);
+  width: 100%;
+
+  transition: all 255ms;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 10%,
+    var(--accent-light) 100%
+  );
+  /* background-color: var(--accent-light); */
+  box-shadow: 0 0 3px var(--accent-light);
+  cursor: pointer;
+}
+
+#statusMessage {
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    var(--accent) 10%,
+    var(--accent-light) 100%
+  );
+  color: #fff;
+  text-align: center;
+  margin-top: var(--spacing);
+  margin-bottom: 0;
+  border-radius: var(--radius);
+  padding: var(--spacing-small);
+  font-size: 0.9em;
+
+  transition: all 255ms;
+}
+
+#statusMessage.active {
+  background-image: linear-gradient(to right, #85dc96 10%, #bdfdca 100%);
+  color: #000;
+}

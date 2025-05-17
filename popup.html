@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Media Timer</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h3><i class="ri-hourglass-fill"></i> Media Timer</h3>
+
+    <div class="numberInput">
+      <button 
+        class="numberInputButton" 
+        id="decreaseTime" 
+        title="Decrease Time &#010SHIFT + Click to decrement by 0.1 &#010CTRL + Click to decrement by 5 &#010ALT + Click to decrement by 10"
+      >
+        <i class="ri-subtract-fill ri-lg ri-fw"></i>
+      </button>
+      <input
+        type="number"
+        placeholder="TIME"
+        id="timeSpinner"
+        class="minuteDisplay"
+        title="Min: 0.1 | Max: 120"
+        min="0"
+        max="120"
+        step="any"
+      />
+      <button
+        class="numberInputButton"
+        id="increaseTime"
+        title="Increase Time &#010SHIFT + Click to increment by 0.1 &#010CTRL + Click to increment by 5 &#010ALT + Click to increment by 10"
+      >
+        <i class="ri-add-fill ri-lg ri-fw"></i>
+      </button>
+    </div>
+
+    <button id="startButton">
+      <i class="ri-timer-fill ri-lg ri-fw"></i> Start Timer
+    </button>
+    <button id="clearButton">
+      <i class="ri-delete-bin-6-fill ri-lg ri-fw"></i> Clear Timer
+    </button>
+
+    <hr />
+
+    <label class="repeatCheckWrapper">
+      <span class="slider"
+        ><i class="ri-repeat-line ri-lg ri-fw"></i> Repeat</span
+      >
+      <input type="checkbox" id="repeatCheckbox" checked="true" />
+    </label>
+
+    <hr />
+    <p id="statusMessage">Status</p>
+    <div class="links">
+    <span class="timeRemaining" id="timeRemaining">20m</span>
+      <a 
+        href="https://ardarmutcu.com/" 
+        target="_blank" title="Website">
+        <i class="ri-global-fill"></i>
+      </a>
+      <a 
+        href="https://github.com/thejayduck/media-timer-extension" 
+        target="_blank" title="Source Code">
+        <i class="ri-github-fill"></i>
+      </a>
+    </div>
+    <script src="scripts/popup.js"></script>
+  </body>
+</html>
