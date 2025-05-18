@@ -1,14 +1,21 @@
-# Media Skip Timer
+![Logo](https://github.com/thejayduck/media-timer-extension/blob/master/images/logo.png?raw=true)
 
 ## About
 
-Media Skip Timer is an extension that automatically skips media after a set time.
+MediaTimer is an extension that automatically skips media after a set time.
 
 ### Why?
 
 I've been testing out drawing streams recently, and I kept running into a problem: the music in playlists, with each track lasting 1-2 hours things got repetitive too quickly and I had to manually change it every few minutes. So I decided to create this simple extension.
 
 _I am not sure if there's something similar to this, but I wanted an excuse to develop my own extension._
+
+## Screenshots
+
+<p>
+    <img src="https://github.com/thejayduck/media-timer-extension/blob/master/images/image-active.png?raw=true" alt="Active State">
+    <img src="https://github.com/thejayduck/media-timer-extension/blob/master/images/image-inactive.png?raw=true" alt="Inactive State">
+</p>
 
 ## TODO
 
