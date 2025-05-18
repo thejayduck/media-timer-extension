@@ -2,11 +2,7 @@
   "manifest_version": 2,
   "name": "Media Timer",
   "author": "TheJayDuck",
-  "developer": {
-    "name": "TheJayDuck",
-    "url": "https://ardarmutcu.com"
-  },
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "A simple extension that automatically skips media after a set time.",
   "homepage_url": "https://github.com/thejayduck/media-timer-extension",
   "icons": {

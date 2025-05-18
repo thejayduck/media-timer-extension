@@ -1,7 +1,7 @@
 const ALARM_NAME = "skipMediaTrackAlarm";
 const ICON_ON = "icons/icon-on_48.png";
 const ICON_OFF = "icons/icon-off_48.png";
-const DRY = false;
+const DRY = false; // Set this to true for testing // TEMP solution
 
 // Functions
 

@@ -1,7 +1,9 @@
 const MAX_TIME = 120; // in minutes
+
 let minutes = 10; // currently set minutes, default: 10 minutes
 let alarmActive = false;
-
+// let dryRun = false; // UNUSED
+// Elements
 let repeatCheckbox, startButton, clearButton, statusMessage, timeRemainingText;
 let decreaseTime, timeSpinner, increaseTime;
 
@@ -32,6 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Update UI
   updateUIState(); // Initial UI update to get everything look normal
   setInterval(updateUIState, 1000);
+
+  document.addEventListener('keypress', (e) => {
+    if (e.code === "Space") {
+      e.preventDefault();
+      alarmActive ? clearButton.click() : startButton.click();
+    }
+  });
 
   // Element Events
   startButton.addEventListener('click', () => {
