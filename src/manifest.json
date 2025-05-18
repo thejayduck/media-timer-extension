@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Media Timer",
   "author": "TheJayDuck",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A simple extension that automatically skips media after a set time.",
   "homepage_url": "https://github.com/thejayduck/media-timer-extension",
   "icons": {
@@ -31,7 +31,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "{6dbcafc9-193d-4d45-b42c-91dc5903e202}",
-      "strict_min_version": "98.0"
+      "strict_min_version": "98.0",
+      "update_url": "https://raw.githubusercontent.com/thejayduck/media-timer-extension/refs/heads/master/updates.json"
     }
   },
   "content_scripts": [
